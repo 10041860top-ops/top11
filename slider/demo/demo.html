@@ -1,35 +1,58 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html lang="en"><head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-
     <title>Nivo Slider Demo</title>
     <link rel="stylesheet" href="../themes/default/default.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../themes/pascal/pascal.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../themes/orman/orman.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="../nivo-slider.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <style>
+        /* Force slider image to show immediately so it doesn't look like a blank spinner if JS fails */
+        #slider img { display: block !important; width: 100% !important; height: auto !important; }
+        /* Hide all but the first image manually before nivo takes over */
+        #slider img:not(:first-child) { display: none !important; }
+        .nivoSlider { background: none !important; } /* Remove the spinning gif */
+    </style>
 </head>
 <body oncontextmenu="window.event.returnValue=false;alert('永登工商稅務版權所有')" >
     <div id="wrapper">
       <div class="slider-wrapper theme-default">
-    
             <div id="slider" class="nivoSlider">
                 <img src="images/to_menu01.jpg" alt="" title="" />
                 <img src="images/to_menu02.jpg" alt="" title="" />
                 <img src="images/to_menu03.jpg" alt="" title="" />
-                
                 <img src="images/to_menu05.jpg" alt="" title="" />
-                 </div>
-           
+            </div>
         </div>
-
     </div>
     <script type="text/javascript" src="scripts/jquery-1.7.1.min.js?v=5"></script>
     <script type="text/javascript" src="../jquery.nivo.slider.pack.js?v=5"></script>
     <script type="text/javascript">
+    function initSlider() {
+        if (!window.sliderInitialized) {
+            window.sliderInitialized = true;
+            try {
+                $('#slider').nivoSlider({
+                    effect: 'random', // Ensure effect is set
+                    animSpeed: 500,
+                    pauseTime: 3000
+                });
+            } catch (e) {
+                console.error("Nivo Slider init failed:", e);
+            }
+        }
+    }
+    
+    $(function() {
+        // Try immediately if images are cached
+        initSlider();
+    });
+    
     $(window).load(function() {
-        $('#slider').nivoSlider();
+        initSlider();
     });
     </script>
 </body>
