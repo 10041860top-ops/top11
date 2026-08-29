@@ -929,5 +929,5 @@ img {
 
     /* Fix legacy table widths */
     table, tbody, tr, td, th { max-width: 100% !important; box-sizing: border-box; }
-    .right_co, .right_co1, .right_co2, .right_li { word-wrap: break-word; width: 100% !important; box-sizing: border-box; }
+    .right_co, .right_co1, .right_co2, .right_li { word-wrap: break-word; overflow-wrap: break-word; width: 100% !important; box-sizing: border-box; }
 }
