@@ -631,3 +631,103 @@ h2{
 	font-size: 14px;
 	margin-left: 20px;
 }
+
+/* Responsive Styles */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .all, .header, .content, .footer {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .soild {
+        width: 100% !important;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .right_contat {
+        width: calc(100% - 270px) !important;
+    }
+    .header_menu table {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .left_menu, .right_contat {
+        width: 100% !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-left: none !important;
+    }
+    .right_contat {
+        margin-top: 20px !important;
+    }
+    .header {
+        height: auto !important;
+    }
+    .logo {
+        float: none !important;
+        margin: 0 auto !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    .header_menu {
+        float: none !important;
+        width: 100% !important;
+        height: auto !important;
+        overflow-x: auto !important;
+    }
+    .header_menu table {
+        width: max-content !important;
+        margin: 0 auto !important;
+    }
+    .footer_cont {
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+    .footer_ac {
+        float: none !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin-top: 10px !important;
+        padding-bottom: 20px !important;
+    }
+    .right_li, .right_co, .right_co1, .right_co2 {
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+    }
+    .footer {
+        text-align: center !important;
+    }
+    .footer_logo {
+        float: none !important;
+        margin: 0 auto !important;
+    }
+    .footer_icon {
+        display: none !important;
+    }
+    .left_service {
+        width: 90% !important;
+        margin: 10px auto !important;
+        float: none !important;
+    }
+    .left_upmenu {
+        width: 90% !important;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+    .left_li {
+        width: 90% !important;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+    .left_li li {
+        width: 100% !important;
+    }
+}
