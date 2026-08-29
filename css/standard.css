@@ -748,9 +748,16 @@ img {
     .header_menu table td a:focus {
         transform: translateY(-2px);
     }
+    .header_menu table td {
+        display: block !important;
+        flex: 1 1 45%;
+        max-width: 50%;
+        text-align: center;
+    }
     .header_menu table td img {
-        height: 60px !important; /* Scale down menu images */
-        width: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 160px !important;
         object-fit: contain;
     }
     
