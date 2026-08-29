@@ -971,3 +971,6 @@ img {
     .left_menu { order: 2 !important; width: 100% !important; float: none !important; margin-bottom: var(--space-4); }
     .right_contat { order: 1 !important; width: 100% !important; float: none !important; }
 }
+
+/* Hide broken link images */
+.link_img { display: none !important; }
